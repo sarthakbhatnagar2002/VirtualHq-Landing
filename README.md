@@ -1,120 +1,141 @@
-# VirtualHQ: A Virtual Reality Collaboration Platform
+<!-- Auto-generated README using AI RAG -->
+<!-- Generated on: 2026-07-28T09:05:35.172Z -->
 
-## Description
+# VirtualHQ
 
-VirtualHQ is a React-based web application designed to facilitate seamless collaboration in virtual environments.  It provides tools for creating and customizing virtual spaces, offering features like ready-made venues, real-time collaboration, and user insights. The application features a visually appealing interface built with Tailwind CSS and utilizes Lucide React for icons.  It's designed to be user-friendly and intuitive, allowing users to easily build and manage their virtual workspaces.
+VirtualHQ is an interactive, pixel-style virtual workspace web application designed to help remote teams connect, collaborate, and build in immersive environments. The application features a retro-futuristic dark mode interface built with React and Tailwind CSS, complete with user authentication, dynamic space feature highlights, pricing tiers, and video walkthrough demos.
+
+---
 
 ## Features
 
-* **Space Creation:**  Users can create and customize immersive virtual environments using drag-and-drop tools.
-* **Ready-Made Venues:**  Pre-built templates for meeting rooms, lounges, and other interactive spaces are available.
-* **Cross-Platform Support:**  The application is designed to work across various devices, including desktops, mobiles, and VR headsets (although VR functionality is not explicitly implemented in the provided code).
-* **Real-time Collaboration:**  Team members can collaborate in real-time within the virtual spaces.
-* **User Insights:**  Built-in analytics provide data on user behavior within the virtual environments.
-* **Pricing Tiers:**  Offers different subscription plans with varying features and team sizes.
+- **Interactive Hero Showcase**: Toggle between different video demonstrations of the virtual office tour and team collaboration spaces.
+- **Space & Feature Customization**: Explore key platform highlights like Space Creators, Universal Access, Ready-Made Venues, Instant Previews, and Collaborative Workspaces.
+- **User Authentication**: Built-in Login and Sign-Up flows supporting user registration, credential validation, session persistence, and logout capabilities.
+- **Dynamic Pricing Tiers**: Compare Free, Pro, and Enterprise subscription options with detailed feature breakdowns.
+- **Client Reviews & Testimonials**: Showcase user feedback and experiences from industry professionals.
+- **Responsive Navigation & Mobile Drawer**: Fully responsive layout optimized for desktop and mobile devices.
+
+---
 
 ## Technology Stack
 
-* **Frontend:** React, React DOM, Vite, Tailwind CSS, Lucide React
-* **Styling:** Tailwind CSS
-* **Icons:** Lucide React
-* **Build Tool:** Vite
-* **Linting:** ESLint with plugins for React and React Hooks
+- **Core Library**: React 18 (`react`, `react-dom`)
+- **Routing**: React Router DOM (`react-router-dom` v7)
+- **Styling**: Tailwind CSS v3/v4 with PostCSS & Autoprefixer
+- **Animations**: Framer Motion (`framer-motion`)
+- **Icons**: Lucide React (`lucide-react`)
+- **Build Tool**: Vite (`vite`)
+- **Linter**: ESLint (`eslint`)
 
-## System Workflow
-
-The application's workflow can be summarized as follows:
-
-1. **Initialization:** The application starts by rendering the `index.html` file, which loads the main React application (`src/main.jsx`).
-
-2. **Component Rendering:** `src/main.jsx` renders the `App` component (`src/App.jsx`), which in turn renders a series of other components: `Navbar`, `FeatureSection`, `Workflow`, `Pricing`, `Testimonials`, and `Footer`.
-
-3. **Data Fetching (Implicit):** The components (`FeatureSection`, `Workflow`, `Pricing`, `Testimonials`, `Footer`, `Navbar`) utilize data from `src/constants/index.jsx`.  This file contains hardcoded data for features, pricing options, testimonials, navigation items, and workflow steps.  In a production environment, this data would likely be fetched from a backend API.
-
-4. **UI Interaction:** Users interact with the UI elements (navigation, buttons, etc.) provided by the components.  Currently, the application is primarily static; user interactions are not directly connected to dynamic changes in the virtual environment.
-
-5. **Rendering:**  React efficiently updates the UI based on user interactions and data changes.
-
-**Simplified Workflow Diagram:**
-
-```
-index.html --> src/main.jsx --> src/App.jsx --> [Navbar, FeatureSection, Workflow, Pricing, Testimonials, Footer] --> src/constants/index.jsx (data)
-```
-
-## Installation
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/YOUR_USERNAME/virtualr.git  // Replace with actual repo URL if available
-   cd virtualr
-   ```
-
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
-   or
-   ```bash
-   yarn install
-   ```
-
-## Usage
-
-1. **Start the development server:**
-   ```bash
-   npm run dev
-   ```
-   or
-   ```bash
-   yarn dev
-   ```
-
-2. **Open your browser:**  Navigate to `http://localhost:5173/`.
+---
 
 ## Project Structure
 
-```
-virtualr-main/
-├── public/
-│   └── vite.svg
+```text
+virtualr/
+├── public/                 # Public assets (e.g., Logo.png)
 ├── src/
-│   ├── App.jsx
-│   ├── assets/
-│   │   ├── hqmage.jpg
-│   │   ├── image_dark_background.png
-│   │   ├── logoo.png
-│   │   └── profile-pictures/
-│   │       ├── user1.jpg
-│   │       ├── user2.jpg
-│   │       ├── user3.jpg
-│   │       ├── user4.jpg
-│   │       ├── user5.jpg
-│   │       └── user6.jpg
-│   ├── components/
-│   │   ├── FeatureSection.jsx
-│   │   ├── Footer.jsx
-│   │   ├── Navbar.jsx
-│   │   ├── Pricing.jsx
-│   │   ├── Testimonials.jsx
-│   │   └── Workflow.jsx
-│   ├── constants/
-│   │   └── index.jsx
-│   ├── index.css
-│   └── main.jsx
-├── .eslintrc.cjs
-├── .gitignore
-├── index.html
-├── package.json
-├── postcss.config.js
-└── tailwind.config.js
-└── vite.config.js
-
+├── assets/             # Images, videos, and user profile pictures
+├── components/         # React components (Navbar, Hero, Features, Workflow, Pricing, Reviews, Footer, Login, Signup)
+├── constants/          # Static data (nav items, testimonials, features, pricing options, links)
+├── App.jsx             # Main application layout and client-side routing
+├── index.css           # Global Tailwind and font styles
+└── main.jsx            # React DOM mounting entry point
+├── .eslintrc.cjs           # ESLint configuration
+├── .gitignore              # Git ignore rules
+├── index.html              # HTML root template
+├── package.json            # Project dependencies and npm scripts
+├── postcss.config.js       # PostCSS configuration
+├── tailwind.config.js      # Tailwind CSS configuration
+└── vite.config.js          # Vite configuration
 ```
+
+---
+
+## Workflow
+
+1. **Landing Page (`/`)**: 
+   - Users land on the `HeroSection`, where they can watch feature videos.
+   - Scrolling down reveals the `FeatureSection`, `Workflow`, `Pricing` plans, and client `Reviews`.
+2. **Authentication Flow (`/Login`, `/signup`)**:
+   - Users can register an account via the Sign-Up page (`/signup`), which communicates with a backend registration endpoint.
+   - Upon successful registration, users can log in (`/Login`) with their credentials.
+   - Session states are verified using protected requests (`http://localhost:5000/user/verify`) and sessions can be terminated via the logout button in the navigation bar.
+
+---
+
+## Installation
+
+### Prerequisites
+Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
+
+### Step-by-Step Setup
+
+1. **Clone the repository**:
+   ```bash
+   git clone <repository-url>
+   cd virtualr
+   ```
+
+2. **Install dependencies**:
+   Using npm:
+   ```bash
+   npm install
+   ```
+   *(Or using your preferred package manager like yarn, pnpm, or bun)*
+
+---
+
+## Usage
+
+### Running the Development Server
+Start the local development server using Vite:
+```bash
+npm run dev
+```
+Open your browser and navigate to the local URL provided by Vite (typically `http://localhost:5173`).
+
+### Building for Production
+To build the optimized production assets:
+```bash
+npm run build
+```
+
+### Previewing the Production Build
+To preview the production build locally:
+```bash
+npm run preview
+```
+
+### Linting
+To run ESLint across the codebase:
+```bash
+npm run lint
+```
+
+---
 
 ## API Documentation
 
-The provided codebase does not include any backend or API endpoints. The `constants/index.jsx` file currently holds all data, which would typically be fetched from an API in a full-fledged application.
+The frontend interacts with an external backend server (inferred to run locally at `http://localhost:5000`). Below are the endpoints consumed by the client components:
+
+| Method | Endpoint | Description | Request Body / Credentials |
+| :--- | :--- | :--- | :--- |
+| `GET` | `http://localhost:5000/user/verify` | Verifies the current authenticated user session | `credentials: 'include'` |
+| `POST` | `http://localhost:5000/user/login` | Authenticates user credentials | JSON: `{ username, password }`, `credentials: 'include'` |
+| `POST` | `http://localhost:5000/user/register` | Registers a new user account | JSON: `{ username, email, password }`, `credentials: 'include'` |
+| `POST` | `http://localhost:5000/user/logout` | Terminates the current user session | `credentials: 'include'` |
+
+---
 
 ## Configuration
 
-The application uses a `tailwind.config.js` file for Tailwind CSS configuration and a `vite.config.js` file for Vite configuration.  No environment variables are explicitly defined in the provided code.  The `package.json` file contains scripts for development (`dev`), building (`build`), linting (`lint`), and preview (`preview`).
+- **Tailwind CSS**: Configured in `tailwind.config.js` and `postcss.config.js`.
+- **Backend API URL**: Currently hardcoded in components (`Login.jsx`, `Signup.jsx`, `Header.jsx`) pointing to `http://localhost:5000`. Ensure your backend service is running locally on port 5000 for authentication features to work properly.
+
+---
+
+## License
+
+No license specified.
